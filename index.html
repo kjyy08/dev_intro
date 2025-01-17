@@ -3,13 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>개발자 소개</title>
+    <title>My Webcrumbs Plugin</title>
     <style>
       @import url(https://fonts.googleapis.com/css2?family=Lato&display=swap);
 
       @import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
-
-      @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
 
       /*! tailwindcss v3.4.11 | MIT License | https://tailwindcss.com*/
       *,
@@ -323,23 +321,53 @@
         --tw-contain-paint: ;
         --tw-contain-style: ;
       }
+      #webcrumbs .mb-4 {
+        margin-bottom: 16px;
+      }
+      #webcrumbs .mb-6 {
+        margin-bottom: 24px;
+      }
+      #webcrumbs .mt-2 {
+        margin-top: 8px;
+      }
+      #webcrumbs .mt-4 {
+        margin-top: 16px;
+      }
+      #webcrumbs .mt-6 {
+        margin-top: 24px;
+      }
+      #webcrumbs .block {
+        display: block;
+      }
       #webcrumbs .flex {
         display: flex;
       }
-      #webcrumbs .h-\[200px\] {
-        height: 200px;
+      #webcrumbs .grid {
+        display: grid;
       }
-      #webcrumbs .w-\[200px\] {
-        width: 200px;
+      #webcrumbs .h-\[150px\] {
+        height: 150px;
       }
-      #webcrumbs .w-\[800px\] {
-        width: 800px;
+      #webcrumbs .w-\[1200px\] {
+        width: 1200px;
+      }
+      #webcrumbs .w-\[150px\] {
+        width: 150px;
+      }
+      #webcrumbs .flex-1 {
+        flex: 1 1 0%;
+      }
+      #webcrumbs .grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
       }
       #webcrumbs .flex-row {
         flex-direction: row;
       }
       #webcrumbs .flex-col {
         flex-direction: column;
+      }
+      #webcrumbs .flex-wrap {
+        flex-wrap: wrap;
       }
       #webcrumbs .items-center {
         align-items: center;
@@ -353,6 +381,9 @@
       #webcrumbs .gap-6 {
         gap: 24px;
       }
+      #webcrumbs .self-start {
+        align-self: flex-start;
+      }
       #webcrumbs .rounded-full {
         border-radius: 9999px;
       }
@@ -362,9 +393,36 @@
       #webcrumbs .rounded-md {
         border-radius: 18px;
       }
+      #webcrumbs .rounded-b-lg {
+        border-bottom-left-radius: 24px;
+        border-bottom-right-radius: 24px;
+      }
+      #webcrumbs .rounded-t-lg {
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+      }
+      #webcrumbs .border {
+        border-width: 1px;
+      }
+      #webcrumbs .bg-neutral-100 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(238 238 238 / var(--tw-bg-opacity));
+      }
+      #webcrumbs .bg-neutral-300 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(202 202 202 / var(--tw-bg-opacity));
+      }
+      #webcrumbs .bg-neutral-50 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(247 247 247 / var(--tw-bg-opacity));
+      }
       #webcrumbs .bg-primary-500 {
         --tw-bg-opacity: 1;
         background-color: rgb(115 65 255 / var(--tw-bg-opacity));
+      }
+      #webcrumbs .bg-primary-700 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(97 27 248 / var(--tw-bg-opacity));
       }
       #webcrumbs .bg-white {
         --tw-bg-opacity: 1;
@@ -373,16 +431,35 @@
       #webcrumbs .object-contain {
         object-fit: contain;
       }
-      #webcrumbs .p-8 {
-        padding: 32px;
+      #webcrumbs .p-3 {
+        padding: 12px;
+      }
+      #webcrumbs .p-4 {
+        padding: 16px;
+      }
+      #webcrumbs .px-4 {
+        padding-left: 16px;
+        padding-right: 16px;
       }
       #webcrumbs .px-6 {
         padding-left: 24px;
         padding-right: 24px;
       }
+      #webcrumbs .py-12 {
+        padding-bottom: 48px;
+        padding-top: 48px;
+      }
+      #webcrumbs .py-2 {
+        padding-bottom: 8px;
+        padding-top: 8px;
+      }
       #webcrumbs .py-3 {
         padding-bottom: 12px;
         padding-top: 12px;
+      }
+      #webcrumbs .py-4 {
+        padding-bottom: 16px;
+        padding-top: 16px;
       }
       #webcrumbs .text-center {
         text-align: center;
@@ -391,9 +468,13 @@
         font-family: Lato, ui-sans-serif, system-ui, sans-serif,
           Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
       }
-      #webcrumbs .text-4xl {
-        font-size: 36px;
-        line-height: 41.4px;
+      #webcrumbs .text-2xl {
+        font-size: 24px;
+        line-height: 31.200000000000003px;
+      }
+      #webcrumbs .text-3xl {
+        font-size: 30px;
+        line-height: 36px;
       }
       #webcrumbs .text-lg {
         font-size: 18px;
@@ -406,13 +487,13 @@
       #webcrumbs .font-semibold {
         font-weight: 600;
       }
+      #webcrumbs .text-neutral-500 {
+        --tw-text-opacity: 1;
+        color: rgb(153 153 153 / var(--tw-text-opacity));
+      }
       #webcrumbs .text-neutral-700 {
         --tw-text-opacity: 1;
         color: rgb(103 103 103 / var(--tw-text-opacity));
-      }
-      #webcrumbs .text-neutral-950 {
-        --tw-text-opacity: 1;
-        color: rgb(40 40 40 / var(--tw-text-opacity));
       }
       #webcrumbs .text-primary-50 {
         --tw-text-opacity: 1;
@@ -421,6 +502,9 @@
       #webcrumbs .text-primary-500 {
         --tw-text-opacity: 1;
         color: rgb(115 65 255 / var(--tw-text-opacity));
+      }
+      #webcrumbs .underline {
+        text-decoration-line: underline;
       }
       #webcrumbs .shadow-lg {
         --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
@@ -434,8 +518,23 @@
         font-family: Open Sans !important;
         font-size: 16px !important;
       }
+      #webcrumbs :is(.bg-neutral-50) {
+        color: rgba(0, 0, 0, 0.9) !important;
+      }
+      #webcrumbs :is(.bg-neutral-100) {
+        color: rgba(0, 0, 0, 0.9) !important;
+      }
+      #webcrumbs :is(.bg-neutral-300) {
+        color: rgba(0, 0, 0, 0.9) !important;
+      }
       #webcrumbs :is(.bg-primary-500) {
         color: hsla(0, 0%, 100%, 0.9) !important;
+      }
+      #webcrumbs :is(.bg-primary-700) {
+        color: hsla(0, 0%, 100%, 0.9) !important;
+      }
+      #webcrumbs .hover\:underline:hover {
+        text-decoration-line: underline;
       }
 
       body {
@@ -453,39 +552,149 @@
   </head>
   <body>
     <div id="webcrumbs">
-      <div
-        class="w-[800px] bg-white shadow-lg rounded-lg p-8 flex flex-col items-center gap-6"
-      >
-        <h1 class="text-4xl font-title text-neutral-950">
-          About the Developer
-        </h1>
-        <img
-          src="https://tools-api.webcrumbs.org/image-placeholder/200/200/avatars/1"
-          alt="Developer Avatar"
-          class="w-[200px] h-[200px] rounded-full object-contain"
-        />
-        <p class="text-neutral-700 text-lg text-center">
-          Hi, I&#x27;m a passionate developer with a knack for crafting
-          beautiful, efficient, and user-friendly experiences. When I&#x27;m not
-          coding, you can find me exploring new technologies and contributing to
-          open-source projects.
-        </p>
-        <div class="flex gap-4">
-          <a href="#" class="text-primary-500 text-xl">
-            <i class="fa-brands fa-github"></i>
-          </a>
-          <a href="#" class="text-primary-500 text-xl">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-          <a href="#" class="text-primary-500 text-xl">
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-        </div>
-        <button
-          class="px-6 py-3 rounded-md bg-primary-500 text-primary-50 font-semibold"
+      <div class="w-[1200px] bg-white shadow-lg rounded-lg">
+        <header
+          class="flex justify-between items-center px-6 py-4 bg-primary-500 text-primary-50 rounded-t-lg"
         >
-          Contact Me
-        </button>
+          <h1 class="text-2xl font-title">Portfolio</h1>
+          <nav class="flex gap-6">
+            <a href="#home" class="hover:underline">Home</a>
+            <a href="#about" class="hover:underline">About Me</a>
+            <a href="#skills" class="hover:underline">Skills</a>
+            <a href="#projects" class="hover:underline">Projects</a>
+            <a href="#contact" class="hover:underline">Contact</a>
+          </nav>
+        </header>
+        <section
+          id="home"
+          class="px-6 py-12 bg-neutral-100 flex flex-col items-center text-center"
+        >
+          <img
+            src="https://tools-api.webcrumbs.org/image-placeholder/150/150/avatars/1"
+            alt="Developer Photo"
+            class="w-[150px] h-[150px] rounded-full mb-6 object-contain"
+          />
+          <h2 class="text-3xl font-title">Hi, I&#x27;m Luigi</h2>
+          <p class="text-neutral-700 mt-4">
+            A passionate junior full-stack developer with 1 year of experience
+            in building web applications.
+          </p>
+          <div class="flex gap-6 mt-6">
+            <button class="px-6 py-3 bg-primary-500 text-primary-50 rounded-md">
+              View My Work
+            </button>
+            <button class="px-6 py-3 bg-neutral-300 rounded-md">
+              Contact Me
+            </button>
+          </div>
+        </section>
+        <section id="about" class="px-6 py-12">
+          <h3 class="text-2xl font-title mb-4">About Me</h3>
+          <p class="text-neutral-700">
+            I specialize in creating responsive and user-friendly web
+            applications using modern frameworks like React and Node.js. When
+            I&#x27;m not coding, you can find me hiking or experimenting with
+            new recipes!
+          </p>
+        </section>
+        <section id="skills" class="px-6 py-12 bg-neutral-50">
+          <h3 class="text-2xl font-title mb-4">Skills</h3>
+          <div class="flex flex-wrap gap-6">
+            <div class="flex-1">
+              <h4 class="text-lg font-semibold">Front-end</h4>
+              <p class="text-neutral-700">HTML, CSS, JavaScript, React</p>
+            </div>
+            <div class="flex-1">
+              <h4 class="text-lg font-semibold">Back-end</h4>
+              <p class="text-neutral-700">Node.js, Express</p>
+            </div>
+            <div class="flex-1">
+              <h4 class="text-lg font-semibold">Database</h4>
+              <p class="text-neutral-700">MongoDB, MySQL</p>
+            </div>
+            <div class="flex-1">
+              <h4 class="text-lg font-semibold">Tools/Technologies</h4>
+              <p class="text-neutral-700">Git, Docker, REST APIs</p>
+            </div>
+          </div>
+        </section>
+        <section id="projects" class="px-6 py-12">
+          <h3 class="text-2xl font-title mb-6">Projects</h3>
+          <div class="grid grid-cols-3 gap-6">
+            <article class="bg-neutral-50 p-4 rounded-md">
+              <h4 class="text-xl font-semibold">Project 1</h4>
+              <p class="text-neutral-700 mt-2">
+                An e-commerce platform with user authentication and payment
+                integration.
+              </p>
+              <p class="text-neutral-500 mt-2">Tech: React, Node.js, MongoDB</p>
+              <a href="#" class="text-primary-500 underline mt-4 block"
+                >View GitHub</a
+              >
+            </article>
+            <article class="bg-neutral-50 p-4 rounded-md">
+              <h4 class="text-xl font-semibold">Project 2</h4>
+              <p class="text-neutral-700 mt-2">
+                A blog application with commenting and admin features.
+              </p>
+              <p class="text-neutral-500 mt-2">Tech: React, Express, MySQL</p>
+              <a href="#" class="text-primary-500 underline mt-4 block"
+                >View GitHub</a
+              >
+            </article>
+            <article class="bg-neutral-50 p-4 rounded-md">
+              <h4 class="text-xl font-semibold">Project 3</h4>
+              <p class="text-neutral-700 mt-2">
+                A weather app displaying real-time data from an external API.
+              </p>
+              <p class="text-neutral-500 mt-2">Tech: JavaScript, REST APIs</p>
+              <a href="#" class="text-primary-500 underline mt-4 block"
+                >View GitHub</a
+              >
+            </article>
+          </div>
+        </section>
+        <section id="contact" class="px-6 py-12 bg-neutral-100">
+          <h3 class="text-2xl font-title mb-6">Contact</h3>
+          <form class="flex flex-col gap-4">
+            <input
+              type="text"
+              placeholder="Name"
+              class="p-3 border rounded-md"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              class="p-3 border rounded-md"
+            />
+            <textarea
+              placeholder="Message"
+              class="p-3 border rounded-md"
+            ></textarea>
+            <button
+              class="px-6 py-3 bg-primary-500 text-primary-50 rounded-md self-start"
+            >
+              Send Message
+            </button>
+          </form>
+          <div class="flex gap-6 mt-6">
+            <a
+              href="mailto:example@example.com"
+              class="text-primary-500 underline"
+              >Email</a
+            >
+            <a href="#" class="text-primary-500 underline">LinkedIn</a>
+            <a href="#" class="text-primary-500 underline">GitHub</a>
+          </div>
+        </section>
+        <footer
+          class="px-6 py-4 bg-primary-500 text-primary-50 flex justify-between items-center rounded-b-lg"
+        >
+          <p>© 2023 [Name]</p>
+          <button class="bg-primary-700 px-4 py-2 rounded-md">
+            Back to Top
+          </button>
+        </footer>
       </div>
     </div>
   </body>
